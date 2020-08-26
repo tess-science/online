@@ -1,0 +1,14 @@
+name: Check-in
+on:
+  schedule:
+    - cron: '0 12/6 26 8 *'
+    - cron: '0 0/6 27 8 *'
+    - cron: '0 0,6 28 8 *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run a one-line script
+      run: curl -X POST "$SLACK_CHECKIN_WEBHOOK"
+      env: 
+        SLACK_CHECKIN_WEBHOOK: ${{ secrets.SLACK_CHECKIN_WEBHOOK }}
