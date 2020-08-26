@@ -1,9 +1,9 @@
 name: Check-in
 on:
   schedule:
-    - cron: '0 12/6 26 8 *'
-    - cron: '0 0/6 27 8 *'
-    - cron: '0 0,6 28 8 *'
+    - cron: '0 12/6 8 9 *'
+    - cron: '0 0/6 9 9 *'
+    - cron: '0 0,6 10 9 *'
 jobs:
   build:
     runs-on: ubuntu-latest
