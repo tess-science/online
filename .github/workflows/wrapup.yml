@@ -1,0 +1,14 @@
+name: Wrap-up
+on:
+  schedule:
+    - cron: '0 12/1 8 9 *'
+    - cron: '0 0/1 9 9 *'
+    - cron: '0 0,1 10 9 *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run a one-line script
+      run: curl -X POST "$SLACK_WRAPUP_HOOK"
+      env: 
+        SLACK_CHECKIN_WEBHOOK: ${{ secrets.SLACK_WRAPUP_HOOK }}
