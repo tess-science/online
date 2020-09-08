@@ -1,9 +1,9 @@
 name: Wrap-up
 on:
   schedule:
-    - cron: '0 12/1 8 9 *'
-    - cron: '0 0/1 9 9 *'
-    - cron: '0 0,1 10 9 *'
+    - cron: '20 * 8 9 *'
+    - cron: '20 * 9 9 *'
+    - cron: '20 0,1,2,3,4,5 10 9 *'
 jobs:
   build:
     runs-on: ubuntu-latest
