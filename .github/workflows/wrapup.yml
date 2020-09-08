@@ -11,4 +11,4 @@ jobs:
     - name: Run a one-line script
       run: curl -X POST "$SLACK_WRAPUP_HOOK"
       env: 
-        SLACK_CHECKIN_WEBHOOK: ${{ secrets.SLACK_WRAPUP_HOOK }}
+        SLACK_WRAPUP_HOOK: ${{ secrets.SLACK_WRAPUP_HOOK }}
